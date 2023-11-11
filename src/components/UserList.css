@@ -1,0 +1,21 @@
+.Users ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    /* width: 50%; */
+    margin: 10px 40px;
+}
+
+.Users li {
+    background-color: rgb(42, 95, 181);
+    color: white;
+    padding: 6px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    transition: .1s;
+}
+
+.Users li:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 12px gray;
+}
