@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './UserList.css';
 import { USERS } from '../users-mock';
+import CreateUser from './CreateUser';
 
 function UserList() {
 
@@ -15,6 +16,9 @@ function UserList() {
 
     return (
         <div className="Users">
+
+            <CreateUser />
+
             <h2>User List</h2>
             <ul>
                 {users.map((i, index) =>
