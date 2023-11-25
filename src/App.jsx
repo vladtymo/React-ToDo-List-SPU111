@@ -2,27 +2,24 @@ import { Link } from 'react-router-dom';
 import './App.css';
 import Counter from './components/Counter';
 import UserList from './components/UserList';
+import About from './components/About';
+import Products from './components/Products';
 import Layout from './components/Layout';
+
+import { Route, Routes } from "react-router-dom";
 
 function App() {
     return (
-        <div className="App">
-            <h1>To-Do List App</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quisquam?</p>
-
-            <nav>
-                <Link to="">Home</Link>
-                <Link to="users">Users</Link>
-                <Link to="products">Products</Link>
-                <Link to="counter">Counter</Link>
-                <Link to="about">About</Link>
-            </nav>
-
-            {/* <Counter />
-            <UserList /> */}
-
-            <Layout />
-        </div>
+        <Routes>
+            <Route path="/" element={<Layout />}>
+                <Route index element={<p>Home Page!</p>}></Route>
+                <Route path="counter" element={<Counter />}></Route>
+                <Route path="users" element={<UserList />}></Route>
+                <Route path="about" element={<About />}></Route>
+                <Route path="products" element={<Products />}></Route>
+                <Route path="*" element={<p>Page Not Found!</p>}></Route>
+            </Route>
+        </Routes>
     );
 }
 

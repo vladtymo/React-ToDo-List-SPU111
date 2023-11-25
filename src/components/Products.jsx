@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const api = 'https://shopwebapispu111.azurewebsites.net/api/products/all';
+//const api = 'https://shopwebapispu111.azurewebsites.net/api/products/all';
 
 export default function Products() {
 
@@ -10,7 +10,7 @@ export default function Products() {
         async function fetchData() {
             console.log("Products conponent is mounted...");
 
-            const res = await fetch(api);
+            const res = await fetch(process.env.REACT_APP_ALL_PRODUCTS);
             const users = await res.json();
 
             setUsers(users);
