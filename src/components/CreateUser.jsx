@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { Button, ButtonGroup, Checkbox } from "@nextui-org/react";
 
 export default function CreateUser() {
 
@@ -28,10 +29,13 @@ export default function CreateUser() {
                 </label>
                 <label>
                     <span>Remember?</span>
-                    <input {...register("isRemember")} type="checkbox" />
+                    {/* <input {...register("isRemember")} type="checkbox" /> */}
+                    <Checkbox {...register("isRemember")} defaultSelected></Checkbox>
                 </label>
                 <div>
-                    <button type="submit">Create</button>
+                    <Button color="primary" type='submit'>
+                        Button
+                    </Button>
                 </div>
             </form>
         </>
