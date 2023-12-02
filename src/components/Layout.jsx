@@ -5,11 +5,12 @@ function Layout() {
     return (
         <>
             <header>
+                <Menu />
                 <h1>To-Do List App</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quisquam?</p>
             </header>
 
-            <Menu />
+
 
             {/* <Counter />
             <UserList /> */}
@@ -17,7 +18,7 @@ function Layout() {
             <Outlet />
 
             <footer>
-                Copyright @...
+
             </footer>
         </>
     );

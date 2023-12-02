@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './UserList.css';
 import { USERS } from '../users-mock';
 import CreateUser from './CreateUser';
+import { Button } from '@nextui-org/react';
 
 function UserList() {
 
@@ -25,7 +26,8 @@ function UserList() {
                     <li key={i.id}>[{i.id}] - {i.name}</li>
                 )}
             </ul>
-            <button onClick={add}>Add User</button>
+            {/* <button onClick={add}>Add User</button> */}
+            <Button onClick={add}>Add User</Button>
         </div>
     );
 }
